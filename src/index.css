@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 340 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 10% 15%;
+
+    --primary: 350 65% 72%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 350 40% 92%;
+    --secondary-foreground: 350 30% 35%;
+
+    --muted: 350 15% 95%;
+    --muted-foreground: 340 10% 46%;
+
+    --accent: 350 35% 94%;
+    --accent-foreground: 350 40% 35%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 340 12% 90%;
+    --input: 340 12% 90%;
+    --ring: 350 65% 72%;
+
+    --radius: 0.875rem;
+
+    --sidebar-background: 340 15% 12%;
+    --sidebar-foreground: 340 8% 85%;
+    --sidebar-primary: 350 65% 75%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 340 15% 18%;
+    --sidebar-accent-foreground: 340 8% 85%;
+    --sidebar-border: 340 15% 20%;
+    --sidebar-ring: 350 65% 72%;
+
+    --success: 145 60% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 340 15% 6%;
+    --foreground: 340 8% 92%;
+
+    --card: 340 15% 10%;
+    --card-foreground: 340 8% 92%;
+
+    --popover: 340 15% 10%;
+    --popover-foreground: 340 8% 92%;
+
+    --primary: 350 65% 72%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 350 30% 22%;
+    --secondary-foreground: 350 20% 85%;
+
+    --muted: 340 12% 16%;
+    --muted-foreground: 340 8% 55%;
+
+    --accent: 350 25% 18%;
+    --accent-foreground: 350 40% 75%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 340 15% 18%;
+    --input: 340 15% 18%;
+    --ring: 350 65% 72%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .capricha-gradient {
+    background: linear-gradient(135deg, hsl(350 65% 72%), hsl(350 50% 82%));
+  }
+  .capricha-card {
+    @apply bg-card rounded-xl border shadow-sm transition-all duration-200 hover:shadow-md;
+  }
+  .capricha-badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+}
